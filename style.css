@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'Bebas';
+    src: url(fonts/Bebas.ttf);
+}
+@font-face {
+    font-family: 'Grand';
+    src: url(fonts/Grand.ttf);
+}
+@font-face {
+    font-family: 'Chunk';
+    src: url("fonts/Chunk.otf") format("opentype");
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+}
+   
+/*navigation*/
+.header {
+    height: 20vh;
+}
+.navbar {
+    background-color: #033375;
+    font-family: "bebas";
+    font-size: 30px;
+    box-shadow: 0 5px 10px #05244e;
+}
+.navbar a {
+    color: #488DEE;
+}
+.navbar a:hover {
+    color: #1d54a1;
+}
+.navbar img {
+    text-align: center;
+    height: 45px;
+    padding: 2px 10px;
+}
+ul {
+    list-style: none;
+}
+.navbar-toggler icon-bar {
+    border: none;
+    padding: 10px 6px;
+    outline: none;
+}
+.navbar-toggler span {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background: #2d74d8;
+}
+.navbar-toggler span + span{
+    margin-top: 5px;
+    width: 25px;
+    margin-left: 0px;
+}
+
+/*header*/
+.container{
+    text-align: center;
+    margin: 20px auto;
+}
+.row h1 {
+    color: transparent;
+    background: linear-gradient(#be9bff, #975fff, #5f51e2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-left: -20px;
+    font-size: 150px;
+    font-family: 'Grand';
+    line-height: 300px;
+}
+.row p {
+    color: #3073d8;
+    margin-top: -120px;
+    margin-left: 120px;
+    font-size: 28px;
+    font-family: 'Bebas';
+    line-height: 70px;
+}
+.row video {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+}
+/*figure*/
+.line {
+    width: 90%;
+    margin: auto;
+    border: 2px dashed #2679d8;
+}
+.line:nth-of-type(1){
+    margin-bottom: 20px;
+}
+.line:nth-of-type(2){
+    margin-bottom: 10px;
+}
+i {
+    font-size: 30px;
+    margin-top: -10px;
+}
+figure img {
+    width: 50%;
+    display: block;
+    margin: 30px auto;
+    height: auto;
+    margin-right : auto;
+    margin-left : auto;
+    min-width : 460px;
+    max-width : 650px;
+}
+figure h1 {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 0;
+    font-size: 45px;
+    font-family: 'Bebas';
+    color: #bfc3d8;
+}
+figure p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family:'Trebuchet MS';
+    text-transform: uppercase;
+    color: #c1c1c7;
+}
+figure p:nth-of-type(2) {
+    color: #5f51e2;
+    font-size: 12px;
+}
+
+/*shop*/
+#Shop h2 {
+    font-size: 50px;
+    font-family: 'Chunk';
+    margin: 60px;
+    text-align: center;
+}
+#products {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 25px;
+    font-family: 'bebas';
+    margin-bottom: 70px;
+    color: #407dd3;
+}
+.product {
+    box-shadow:  0 5px 10px #163157;
+    position: relative;
+} 
+.product h1 {
+    font-size: 50px;
+}
+.product p {
+    font-size: 20px;
+}
+.product_image {
+    width: 100%;
+    display: block;
+}
+.product_price {
+    font-size: 30px;
+    padding: 5px;
+    background-color: #0f448f;
+    text-align: center;
+}
+.product_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product_info button {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: #202020;
+    width: 230px;
+    height: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: #000000d8;
+    color: white;
+    font-family: 'Bebas';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.30s;
+}
+.overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.20s;
+}
+.overlay:hover {
+    opacity: 1;
+}
+.overlay:hover > * {
+    transform: translateY(0px);
+}
+
+/*about*/
+article {
+    width: 80%;
+    margin: 80px auto;
+    padding: 25px;
+    border: 7px solid #0b408a;
+    text-align: center;
+} 
+#About{
+    font-size: 17px;
+}
+#About p {
+    font-family: 'bebas';
+    font-size: 23px;
+}
+#About h1{
+    font-family: 'Bebas';
+    font-weight: bolder;
+    font-size: 55px;
+}
+#About hr {
+    width: 80%;
+    margin: 10px auto;
+    border: 2px solid #25589e;
+}
+dd {
+    font-size: 15px;
+}
+.ad {
+    margin-bottom: 60px;
+}
+
+/*contact*/
+#Contact{
+    font-size: 35px;
+}
+#Contact hr {
+    width: 80%;
+    margin: 10px auto;
+    border: 2px solid #1b508d80;
+    border-radius: 20px;
+}
+#Contact hr:nth-of-type(2) {
+    width: 60%;
+}
+.container address {
+    margin-bottom: 20px;
+}
+address {
+    font-size: 150%;
+    line-height: -10px;
+}
+
+/*cola*/
+.cola {
+    margin-bottom: -30px;
+}
+.cola-content {
+    margin-bottom: 20%;
+}
+.cola-content h1 {
+    font-family: 'bebas';
+    font-size: 40px;
+    line-height: 80px;
+    color: #d4d4d4;
+    margin-left: 0;
+}
+.cola-content h2 {
+    font-family: 'bebas';
+    font-size: 30px;
+    margin-top: -30px;
+    text-align: center;
+    color: #949494;
+}
+.cola-content button {
+    font-size: 20px;
+    font-family: 'bebas';
+    background-color: transparent;
+    border: none;
+    color: #202020;
+    width: 70%;
+    text-align: center;
+    background-color: #238adf;
+    border-radius: 10px;
+}
+.cola-content hr {
+    width: 90%;
+    margin: 15px;
+    border: 2px solid #3077d3;
+    border-radius: 10px;
+}
+.cola-content dt {
+    font-size: 20px;
+}
+.cola-content dd {
+    line-height: 10px;
+}
+.cola-content div:nth-last-child(1) {
+    border: 3px solid #9765d1;
+}
